@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Days IIS Mendel - Ottobre & Novembre 2024</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #1a5f1a 0%, #2d8b2d 50%, #4ab34a 100%);
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e7e1e 0%, #2d9e2d 100%);
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 0.8; }
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 4em;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+            animation: slideDown 1s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header .subtitle {
+            color: #fff;
+            font-size: 1.8em;
+            margin-top: 20px;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .dates-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 60px 20px 30px;
+            flex-wrap: wrap;
+        }
+
+        .qr-hero-section {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+            padding: 60px 20px;
+            margin: 40px 20px;
+            border-radius: 40px;
+            box-shadow: 0 20px 80px rgba(255, 215, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 20px 80px rgba(255, 215, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 25px 100px rgba(255, 215, 0, 0.7), 0 0 50px rgba(255, 215, 0, 0.5);
+            }
+        }
+
+        .qr-glow-effect {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            animation: rotate-glow 8s linear infinite;
+        }
+
+        @keyframes rotate-glow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .qr-hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .qr-hero-title {
+            font-size: 3.5em;
+            color: #1e7e1e;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            animation: bounce-title 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce-title {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .qr-hero-subtitle {
+            font-size: 1.8em;
+            color: #2e8e2e;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .qr-main-box {
+            background: white;
+            padding: 40px;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 15px 60px rgba(0,0,0,0.3);
+            border: 8px solid #2e8e2e;
+            animation: pulse-box 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes pulse-box {
+            0%, 100% {
+                transform: scale(1);
+                border-color: #2e8e2e;
+            }
+            50% {
+                transform: scale(1.05);
+                border-color: #4ab34a;
+            }
+        }
+
+        .qr-main-box::before {
+            content: '📱';
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            font-size: 3em;
+            animation: shake 1s ease-in-out infinite;
+        }
+
+        .qr-main-box::after {
+            content: '✨';
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            font-size: 3em;
+            animation: twinkle 1.5s ease-in-out infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .qr-main-image {
+            width: 350px;
+            height: 350px;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .qr-instructions {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 50px 0 30px;
+            flex-wrap: wrap;
+        }
+
+        .instruction-step {
+            background: white;
+            padding: 25px 35px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 3px solid #2e8e2e;
+        }
+
+        .instruction-step:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(46, 142, 46, 0.4);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: 900;
+        }
+
+        .step-text {
+            font-size: 1.3em;
+            color: #1e7e1e;
+            font-weight: 700;
+        }
+
+        .qr-badge {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            color: white;
+            padding: 20px 50px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: 800;
+            display: inline-block;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(46, 142, 46, 0.4);
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .date-card {
+            background: white;
+            border-radius: 30px;
+            padding: 50px 60px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .date-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(46, 142, 46, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s;
+        }
+
+        .date-card:hover::before {
+            left: 100%;
+        }
+
+        .date-card:hover {
+            transform: translateY(-20px) scale(1.05);
+            box-shadow: 0 30px 80px rgba(46, 142, 46, 0.4);
+        }
+
+        .date-card h2 {
+            font-size: 5em;
+            color: #2e8e2e;
+            margin-bottom: 10px;
+            font-weight: 900;
+        }
+
+        .date-card h3 {
+            font-size: 3em;
+            color: #1e7e1e;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .info-section {
+            background: white;
+            margin: 40px 20px;
+            border-radius: 30px;
+            padding: 60px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .info-section h2 {
+            color: #2e8e2e;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .turns-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .turn-card {
+            background: linear-gradient(135deg, #f0f9f0 0%, #e1f5e1 100%);
+            border-radius: 20px;
+            padding: 40px;
+            border-left: 8px solid #2e8e2e;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .turn-card:hover {
+            transform: translateX(10px);
+            box-shadow: -10px 10px 30px rgba(46, 142, 46, 0.2);
+        }
+
+        .turn-card h3 {
+            color: #1e7e1e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .turn-card ul {
+            list-style: none;
+        }
+
+        .turn-card li {
+            padding: 15px 0;
+            border-bottom: 2px solid #d0e8d0;
+            font-size: 1.1em;
+            color: #333;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .turn-card li:hover {
+            padding-left: 15px;
+            color: #2e8e2e;
+        }
+
+        .turn-card li::before {
+            content: '🌱';
+            margin-right: 15px;
+            font-size: 1.5em;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            padding: 80px 20px;
+            text-align: center;
+            margin: 60px 0 0 0;
+        }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 40px;
+            font-weight: 800;
+        }
+
+        .cta-button {
+            background: white;
+            color: #2e8e2e;
+            padding: 25px 60px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            background: #ffd700;
+        }
+
+        .contact-info {
+            background: white;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.3em;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: scale(1.1);
+            color: #2e8e2e;
+        }
+
+        .contact-item::before {
+            font-size: 2em;
+        }
+
+        .phone::before { content: '📞'; }
+        .web::before { content: '🌐'; }
+        .youtube::before { content: '📺'; }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #1e7e1e;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            animation: pulse-highlight 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-highlight {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .poster-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            margin: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .poster-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto 40px;
+            padding: 20px;
+        }
+
+        .poster-card {
+            background: linear-gradient(135deg, #f8fdf8 0%, #f0f9f0 100%);
+            border-radius: 25px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+
+        .poster-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(46, 142, 46, 0.3);
+            border-color: #2e8e2e;
+        }
+
+        .poster-title {
+            color: #2e8e2e;
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .poster-image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            border: 2px solid #e1f5e1;
+        }
+
+        .poster-image:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.25);
+        }
+
+        .poster-caption {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #1e7e1e;
+            font-weight: 700;
+            padding: 15px;
+            background: white;
+            border-radius: 15px;
+            border: 2px solid #2e8e2e;
+        }
+
+        .download-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn, .view-full-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(46, 142, 46, 0.3);
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .download-btn:hover, .view-full-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(46, 142, 46, 0.4);
+            background: linear-gradient(135deg, #4ab34a 0%, #2e8e2e 100%);
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .qr-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(46, 142, 46, 0.2);
+            text-align: center;
+            border: 5px solid #2e8e2e;
+            animation: pulse-qr 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-qr {
+            0%, 100% { 
+                box-shadow: 0 15px 50px rgba(46, 142, 46, 0.2);
+                border-color: #2e8e2e;
+            }
+            50% { 
+                box-shadow: 0 20px 60px rgba(46, 142, 46, 0.4);
+                border-color: #4ab34a;
+            }
+        }
+
+        .qr-box h3 {
+            color: #2e8e2e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .qr-code {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #ddd;
+            border-radius: 15px;
+            background: white;
+            padding: 20px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .qr-text {
+            margin-top: 25px;
+            font-size: 1.2em;
+            color: #333;
+            font-weight: 600;
+            max-width: 400px;
+        }
+
+        .qr-instruction {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .qr-placeholder {
+            background: linear-gradient(135deg, #f0f9f0 0%, #e1f5e1 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 3px dashed #2e8e2e;
+        }
+
+        .qr-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(46, 142, 46, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(46, 142, 46, 0.4);
+        }
+
+        .qr-container {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+
+        .qr-box {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px rgba(46, 142, 46, 0.2);
+            text-align: center;
+            border: 5px solid #2e8e2e;
+            animation: pulse-qr 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse-qr {
+            0%, 100% { 
+                box-shadow: 0 15px 50px rgba(46, 142, 46, 0.2);
+                border-color: #2e8e2e;
+            }
+            50% { 
+                box-shadow: 0 20px 60px rgba(46, 142, 46, 0.4);
+                border-color: #4ab34a;
+            }
+        }
+
+        .qr-box h3 {
+            color: #2e8e2e;
+            font-size: 2em;
+            margin-bottom: 25px;
+            font-weight: 800;
+        }
+
+        .qr-instruction {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .qr-placeholder {
+            background: linear-gradient(135deg, #f0f9f0 0%, #e1f5e1 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin: 20px 0;
+            border: 3px dashed #2e8e2e;
+        }
+
+        .qr-features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(46, 142, 46, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(46, 142, 46, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .date-card h2 {
+                font-size: 3em;
+            }
+            
+            .date-card h3 {
+                font-size: 2em;
+            }
+            
+            .turns-container {
+                grid-template-columns: 1fr;
+            }
+
+            .qr-code {
+                width: 250px;
+                height: 250px;
+            }
+
+            .qr-box {
+                padding: 30px 20px;
+            }
+
+            .poster-pdf {
+                height: 600px;
+            }
+
+            .qr-features {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .feature-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="floating">🌿 OPEN DAYS 🌿</h1>
+        <p class="subtitle">IIS Mendel - Scopri la Scuola del Futuro!</p>
+    </div>
+
+    <div class="dates-container">
+        <div class="date-card">
+            <h2>18</h2>
+            <h3>Ottobre</h3>
+        </div>
+        <div class="date-card">
+            <h2>15</h2>
+            <h3>Novembre</h3>
+        </div>
+    </div>
+
+    <div class="qr-hero-section">
+        <div class="qr-hero-container">
+            <div class="qr-glow-effect"></div>
+            <h2 class="qr-hero-title">⚡ ISCRIVITI SUBITO! ⚡</h2>
+            <p class="qr-hero-subtitle">Scansiona il QR Code con il tuo smartphone</p>
+            
+            <div class="qr-main-box">
+                <img src="https://agrariomendel.edu.it/allegati/all/5081-qrcode-open-day.png" alt="QR Code Iscrizione Open Days" class="qr-main-image">
+            </div>
+            
+            <div class="qr-instructions">
+                <div class="instruction-step">
+                    <span class="step-number">1</span>
+                    <span class="step-text">Apri la fotocamera</span>
+                </div>
+                <div class="instruction-step">
+                    <span class="step-number">2</span>
+                    <span class="step-text">Inquadra il QR code</span>
+                </div>
+                <div class="instruction-step">
+                    <span class="step-number">3</span>
+                    <span class="step-text">Clicca e iscriviti!</span>
+                </div>
+            </div>
+            
+            <div class="qr-badge">
+                ✅ Iscrizione obbligatoria • Posti limitati
+            </div>
+        </div>
+    </div>
+
+    <div class="poster-section">
+        <h2 style="color: #2e8e2e; font-size: 2.5em; margin-bottom: 30px; font-weight: 800;">📋 Il Nostro Poster Ufficiale 📋</h2>
+        
+        <div class="poster-gallery">
+            <div class="poster-card">
+                <h3 class="poster-title">FRONTE - Date e Informazioni</h3>
+                <img src="https://agrariomendel.edu.it/allegati/all/5079-1.png" alt="Poster Open Days - Fronte" class="poster-image">
+                <p class="poster-caption">📱 Scansiona il QR code nell'immagine per iscriverti!</p>
+            </div>
+            
+            <div class="poster-card">
+                <h3 class="poster-title">RETRO - Programma Dettagliato</h3>
+                <img src="https://agrariomendel.edu.it/allegati/all/5080-2.png" alt="Poster Open Days - Retro" class="poster-image">
+                <p class="poster-caption">📅 Scopri il programma completo dei due turni</p>
+            </div>
+        </div>
+        
+        <div class="download-section">
+            <a href="https://agrariomendel.edu.it/allegati/all/5079-1.png" download class="download-btn">
+                📥 Scarica Fronte
+            </a>
+            <a href="https://agrariomendel.edu.it/allegati/all/5080-2.png" download class="download-btn">
+                📥 Scarica Retro
+            </a>
+            <a href="https://agrariomendel.edu.it/allegati/all/5078-manfiesto-open-day-autunno-poster-a3-verticale-compressed.pdf" target="_blank" class="download-btn">
+                📄 Scarica PDF Completo
+            </a>
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>✨ Vieni a Scoprire i Nostri Nuovi Laboratori! ✨</h2>
+        <div class="highlight">
+            📋 ISCRIZIONE OBBLIGATORIA TRAMITE QR CODE 📋
+        </div>
+        
+        <div class="turns-container">
+            <div class="turn-card">
+                <h3>🌅 PRIMO TURNO</h3>
+                <ul>
+                    <li><strong>8:30</strong> Registrazione e Accoglienza</li>
+                    <li><strong>8:45</strong> Inizio Open Day in Aula Magna</li>
+                    <li><strong>9:00</strong> Visita ai Laboratori e Aule Tematiche</li>
+                    <li><strong>11:00</strong> Fine del Turno</li>
+                </ul>
+            </div>
+            
+            <div class="turn-card">
+                <h3>☀️ SECONDO TURNO</h3>
+                <ul>
+                    <li><strong>10:30</strong> Registrazione e Accoglienza</li>
+                    <li><strong>10:45</strong> Inizio Open Day in Aula Magna</li>
+                    <li><strong>11:00</strong> Visita ai Laboratori e Aule Tematiche</li>
+                    <li><strong>13:00</strong> Fine del Turno</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>🎓 Non Perdere Questa Opportunità! 🎓</h2>
+        <p style="color: white; font-size: 1.3em; margin-bottom: 30px;">
+            Visita la nostra scuola e scopri un mondo di opportunità!
+        </p>
+        <a href="https://agrariomendel.edu.it/" class="cta-button">
+            Iscriviti Ora!
+        </a>
+    </div>
+
+    <div class="contact-info">
+        <div class="contact-item phone">
+            <span><strong>Telefono:</strong> 0331 434311</span>
+        </div>
+        <div class="contact-item web">
+            <span><strong>Web:</strong> www.agrariomendel.edu.it</span>
+        </div>
+        <div class="contact-item youtube">
+            <span><strong>YouTube:</strong> IIS Mendel Channel</span>
+        </div>
+    </div>
+</body>
+</html>
