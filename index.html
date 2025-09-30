@@ -89,6 +89,133 @@
             flex-wrap: wrap;
         }
 
+        .welcome-section {
+            background: linear-gradient(135deg, #ffffff 0%, #f0f9f0 100%);
+            padding: 80px 20px;
+            margin: 40px 20px;
+            border-radius: 40px;
+            box-shadow: 0 15px 60px rgba(46, 142, 46, 0.15);
+        }
+
+        .welcome-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .welcome-title {
+            font-size: 3em;
+            color: #2e8e2e;
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .welcome-content {
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .highlight-text {
+            font-size: 1.6em;
+            color: #1e7e1e;
+            text-align: center;
+            margin-bottom: 50px;
+            line-height: 1.6;
+            padding: 30px;
+            background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .feature-box {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+            text-align: center;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 60px rgba(46, 142, 46, 0.2);
+            border-color: #2e8e2e;
+        }
+
+        .feature-icon {
+            font-size: 4em;
+            display: block;
+            margin-bottom: 20px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .feature-box h3 {
+            color: #2e8e2e;
+            font-size: 1.5em;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .feature-box p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .cta-message {
+            background: linear-gradient(135deg, #2e8e2e 0%, #1e7e1e 100%);
+            padding: 50px 40px;
+            border-radius: 30px;
+            margin-top: 50px;
+            box-shadow: 0 15px 50px rgba(46, 142, 46, 0.3);
+            animation: pulse-cta 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse-cta {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .cta-text {
+            color: white;
+            font-size: 1.4em;
+            line-height: 1.8;
+            text-align: center;
+            margin: 0;
+        }
+
+        .cta-text strong {
+            font-size: 1.2em;
+            display: block;
+            margin-bottom: 15px;
+        }
+
         .qr-hero-section {
             background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
             padding: 60px 20px;
@@ -815,6 +942,54 @@
         <div class="date-card">
             <h2>15</h2>
             <h3>Novembre</h3>
+        </div>
+    </div>
+
+    <div class="welcome-section">
+        <div class="welcome-container">
+            <h2 class="welcome-title">🌱 Scopri il Futuro di Tuo Figlio al Mendel! 🌱</h2>
+            
+            <div class="welcome-content">
+                <div class="welcome-text">
+                    <p class="highlight-text">
+                        <strong>Perché scegliere l'IIS Mendel?</strong> Non è solo una scuola, è un trampolino di lancio per il futuro!
+                    </p>
+                    
+                    <div class="features-grid">
+                        <div class="feature-box">
+                            <span class="feature-icon">🔬</span>
+                            <h3>Laboratori All'Avanguardia</h3>
+                            <p>Nuovi spazi tecnologici dove teoria e pratica si incontrano: laboratori scientifici, serre moderne, cucine professionali e attrezzature agricole di ultima generazione.</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <span class="feature-icon">🌍</span>
+                            <h3>Settore in Crescita</h3>
+                            <p>Agricoltura, alimentazione sostenibile, biotecnologie verdi: formiamo professionisti per i lavori del futuro in un settore che vale oro!</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <span class="feature-icon">👨‍🎓</span>
+                            <h3>Apprendimento Pratico</h3>
+                            <p>Mettiamo le mani nella terra, gestiamo serre reali, lavoriamo con tecnologie agricole 4.0. Qui si impara facendo!</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <span class="feature-icon">🚀</span>
+                            <h3>Opportunità Concrete</h3>
+                            <p>Stage, collaborazioni con aziende del territorio, certificazioni professionali. I nostri diplomati trovano lavoro o proseguono con successo all'università!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-message">
+                        <p class="cta-text">
+                            ✨ <strong>Non lasciare al caso il futuro di tuo figlio!</strong> ✨<br>
+                            Vieni a vedere con i tuoi occhi i nostri laboratori, incontra i docenti, parla con gli studenti. 
+                            Scopri come trasformiamo la passione per la natura in competenze professionali concrete.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
