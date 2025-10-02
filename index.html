@@ -14,8 +14,65 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden;
-            background: linear-gradient(135deg, #1a5f1a 0%, #2d8b2d 50%, #4ab34a 100%);
             color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .background-slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+        }
+
+        .background-slideshow img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0;
+            animation: slideshow 85s infinite;
+        }
+
+        .background-slideshow img:nth-child(1) { animation-delay: 0s; }
+        .background-slideshow img:nth-child(2) { animation-delay: 5s; }
+        .background-slideshow img:nth-child(3) { animation-delay: 10s; }
+        .background-slideshow img:nth-child(4) { animation-delay: 15s; }
+        .background-slideshow img:nth-child(5) { animation-delay: 20s; }
+        .background-slideshow img:nth-child(6) { animation-delay: 25s; }
+        .background-slideshow img:nth-child(7) { animation-delay: 30s; }
+        .background-slideshow img:nth-child(8) { animation-delay: 35s; }
+        .background-slideshow img:nth-child(9) { animation-delay: 40s; }
+        .background-slideshow img:nth-child(10) { animation-delay: 45s; }
+        .background-slideshow img:nth-child(11) { animation-delay: 50s; }
+        .background-slideshow img:nth-child(12) { animation-delay: 55s; }
+        .background-slideshow img:nth-child(13) { animation-delay: 60s; }
+        .background-slideshow img:nth-child(14) { animation-delay: 65s; }
+        .background-slideshow img:nth-child(15) { animation-delay: 70s; }
+        .background-slideshow img:nth-child(16) { animation-delay: 75s; }
+        .background-slideshow img:nth-child(17) { animation-delay: 80s; }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            z-index: -1;
+        }
+
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
         }
 
         .top-banner {
@@ -1017,38 +1074,41 @@
     </style>
 </head>
 <body>
-    <div class="top-banner">
-        <a href="https://agrariomendel.edu.it/servizi/203-ptof-piano-offerta-triennale-2025-2028" target="_blank" class="ptof-button">
-            📚 LEGGI IL NOSTRO PTOF
-        </a>
-        <a href="https://agrariomendel.edu.it/la-scuola/presentazione" target="_blank" class="ptof-button">
-            🏫 PRESENTAZIONE DELLA NOSTRA SCUOLA
-        </a>
+    <div class="background-slideshow">
+        <img src="foto1.jpg" alt="Serre Mendel">
+        <img src="foto2.jpg" alt="Prodotti artigianali">
+        <img src="foto4.JPG" alt="Stelle di Natale">
+        <img src="foto5.jpg" alt="Serra fiori">
+        <img src="foto6.jpg" alt="Progetto UTAH">
+        <img src="foto7.JPG" alt="Fiori colorati">
+        <img src="foto8.jpg" alt="Edificio scuola">
+        <img src="foto9.jpg" alt="Campus">
+        <img src="foto10.jpg" alt="Ingresso scuola">
+        <img src="foto11.jpg" alt="Campus autunno">
+        <img src="foto12.jpg" alt="Gita studenti">
+        <img src="foto14.JPG" alt="Laboratorio scientifico">
+        <img src="foto15.jpg" alt="Lezione UTAH">
+        <img src="foto16.jpg" alt="Staff docenti">
+        <img src="foto17.jpg" alt="I Love Mendel">
+        <img src="foto18.jpg" alt="Studenti festa">
+        <img src="foto19.jpg" alt="Cucina professionale">
     </div>
-
-    <div class="header">
-        <div class="slideshow">
-            <img src="foto1.jpg" alt="Serre Mendel">
-            <img src="foto2.jpg" alt="Prodotti artigianali">
-            <img src="foto4.JPG" alt="Stelle di Natale">
-            <img src="foto5.jpg" alt="Serra fiori">
-            <img src="foto6.jpg" alt="Progetto UTAH">
-            <img src="foto7.JPG" alt="Fiori colorati">
-            <img src="foto8.jpg" alt="Edificio scuola">
-            <img src="foto9.jpg" alt="Campus">
-            <img src="foto10.jpg" alt="Ingresso scuola">
-            <img src="foto11.jpg" alt="Campus autunno">
-            <img src="foto12.jpg" alt="Gita studenti">
-            <img src="foto14.JPG" alt="Laboratorio scientifico">
-            <img src="foto15.jpg" alt="Lezione UTAH">
-            <img src="foto16.jpg" alt="Staff docenti">
-            <img src="foto17.jpg" alt="I Love Mendel">
-            <img src="foto18.jpg" alt="Studenti festa">
-            <img src="foto19.jpg" alt="Cucina professionale">
+    <div class="overlay"></div>
+    
+    <div class="content-wrapper">
+        <div class="top-banner">
+            <a href="https://agrariomendel.edu.it/servizi/203-ptof-piano-offerta-triennale-2025-2028" target="_blank" class="ptof-button">
+                📚 LEGGI IL NOSTRO PTOF
+            </a>
+            <a href="https://agrariomendel.edu.it/la-scuola/presentazione" target="_blank" class="ptof-button">
+                🏫 PRESENTAZIONE DELLA NOSTRA SCUOLA
+            </a>
         </div>
-        <h1 class="floating">🌿 OPEN DAYS 🌿</h1>
-        <p class="subtitle">IIS Mendel - Scopri la Scuola del Futuro!</p>
-    </div>
+
+        <div class="header">
+            <h1 class="floating">🌿 OPEN DAYS 🌿</h1>
+            <p class="subtitle">IIS Mendel - Scopri la Scuola del Futuro!</p>
+        </div>
 
     <div class="dates-container">
         <div class="date-card">
@@ -1237,6 +1297,7 @@
         <div class="contact-item instagram">
             <span><strong>Instagram:</strong> <a href="https://www.instagram.com/iis_mendelvillacortese/" target="_blank" style="color: inherit; text-decoration: none;">@iis_mendelvillacortese</a></span>
         </div>
+    </div>
     </div>
 </body>
 </html>
